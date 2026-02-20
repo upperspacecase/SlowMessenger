@@ -1,0 +1,214 @@
+/* Onboarding — "Ritual setup, not feature tour" */
+
+.stepContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Welcome step */
+.welcomeContent {
+  text-align: center;
+  max-width: 340px;
+  animation: fadeSettle var(--duration-dramatic) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.welcomeTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--tracking-tight);
+}
+
+.welcomeSubtitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  color: var(--color-terracotta);
+  font-style: italic;
+  margin-bottom: var(--space-7);
+}
+
+.welcomeDescription {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-warm-grey);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-9);
+  white-space: pre-line;
+}
+
+/* Step content */
+.stepContent {
+  width: 100%;
+  max-width: 380px;
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: none;
+  border: none;
+  color: var(--color-warm-grey);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  padding: var(--space-2);
+  margin: calc(var(--space-2) * -1);
+  margin-bottom: var(--space-6);
+  border-radius: var(--radius-sm);
+  transition: color var(--duration-quick) var(--ease-default);
+  letter-spacing: var(--tracking-wide);
+}
+
+.backButton:hover {
+  color: var(--color-ink);
+}
+
+.stepTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-3);
+}
+
+.stepDescription {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-warm-grey);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* Text input */
+.textInput {
+  width: 100%;
+  padding: var(--space-4) 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-clay-light);
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--color-ink);
+  outline: none;
+  margin-bottom: var(--space-6);
+  transition: border-color var(--duration-quick) var(--ease-default);
+}
+
+.textInput:focus {
+  border-bottom-color: var(--color-terracotta);
+}
+
+.textInput::placeholder {
+  color: var(--color-clay-light);
+  font-style: italic;
+}
+
+/* Note input for invitation */
+.noteInput {
+  width: 100%;
+  padding: var(--space-4);
+  background: var(--color-linen);
+  border: 1px solid var(--color-clay-light);
+  border-radius: var(--radius-md);
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  color: var(--color-ink);
+  line-height: var(--leading-relaxed);
+  outline: none;
+  resize: none;
+  margin-bottom: var(--space-6);
+  transition: border-color var(--duration-quick) var(--ease-default);
+}
+
+.noteInput:focus {
+  border-color: var(--color-terracotta-soft);
+}
+
+.noteInput::placeholder {
+  color: var(--color-clay-light);
+  font-style: italic;
+}
+
+/* Buttons */
+.continueButton {
+  width: 100%;
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-ink);
+  color: var(--color-linen);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-quick) var(--ease-default);
+}
+
+.continueButton:hover:not(:disabled) {
+  background: var(--color-indigo);
+}
+
+.continueButton:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.continueButton:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.inviteActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.skipButton {
+  width: 100%;
+  padding: var(--space-4) var(--space-6);
+  background: transparent;
+  color: var(--color-warm-grey);
+  border: none;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: color var(--duration-quick) var(--ease-default);
+  letter-spacing: var(--tracking-wide);
+}
+
+.skipButton:hover {
+  color: var(--color-ink);
+}
+
+/* Completion */
+.completeContent {
+  text-align: center;
+  animation: fadeSettle var(--duration-slow) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.completeText {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--color-ink);
+  font-weight: var(--weight-medium);
+  margin-bottom: var(--space-4);
+  line-height: var(--leading-relaxed);
+}
+
+.completeSubtext {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-warm-grey);
+  letter-spacing: var(--tracking-wide);
+}

@@ -1,0 +1,51 @@
+/* DeliveryClock — "The heartbeat of the app" */
+
+.clock {
+  text-align: center;
+  padding: var(--space-10) 0 var(--space-8);
+  position: relative;
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.clockAlive {
+  /* Subtle warm pulse when letters are waiting */
+}
+
+.timeDisplay {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.1;
+  margin-bottom: var(--space-3);
+}
+
+.clockAlive .timeDisplay {
+  color: var(--color-terracotta);
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-warm-grey);
+  letter-spacing: var(--tracking-wide);
+  text-transform: lowercase;
+}
+
+.clockAlive .label {
+  color: var(--color-terracotta-soft);
+}
+
+.pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: gentlePulse 3s var(--ease-breathe) infinite;
+}

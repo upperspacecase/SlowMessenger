@@ -1,0 +1,142 @@
+/* Delivery Reveal — "The mailbox moment" */
+/* "The most emotionally important component" */
+
+.deliverPage {
+  padding-top: var(--space-8);
+}
+
+.header {
+  text-align: center;
+  padding: var(--space-8) 0 var(--space-9);
+  animation: fadeSettle var(--duration-dramatic) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-terracotta);
+  letter-spacing: var(--tracking-tight);
+}
+
+/* Letter stack */
+.letterStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+/* Each letter — "turning over cards on a table" */
+.letter {
+  background: var(--color-linen);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7) var(--space-6);
+  box-shadow: var(--shadow-letter);
+  animation: letterReveal var(--duration-dramatic) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.letterFrom {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-terracotta);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+
+.letterContent {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  line-height: var(--leading-loose);
+  color: var(--color-ink);
+  margin-bottom: var(--space-5);
+  white-space: pre-wrap;
+}
+
+.letterTime {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-warm-grey);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* Completion */
+.completion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-6) 0 var(--space-8);
+  animation: fadeSettle var(--duration-dramatic) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.replyButton {
+  width: 100%;
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-ink);
+  color: var(--color-linen);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-quick) var(--ease-default);
+}
+
+.replyButton:hover {
+  background: var(--color-indigo);
+}
+
+.doneButton {
+  width: 100%;
+  padding: var(--space-4) var(--space-6);
+  background: transparent;
+  color: var(--color-warm-grey);
+  border: none;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: color var(--duration-quick) var(--ease-default);
+  letter-spacing: var(--tracking-wide);
+}
+
+.doneButton:hover {
+  color: var(--color-ink);
+}
+
+/* Empty state */
+.emptyState {
+  text-align: center;
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.emptyText {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-warm-grey);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-6);
+}
+
+.returnButton {
+  padding: var(--space-3) var(--space-6);
+  background: none;
+  border: 1px solid var(--color-clay-light);
+  border-radius: var(--radius-md);
+  color: var(--color-warm-grey);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: all var(--duration-quick) var(--ease-default);
+  letter-spacing: var(--tracking-wide);
+}
+
+.returnButton:hover {
+  color: var(--color-ink);
+  border-color: var(--color-clay);
+}

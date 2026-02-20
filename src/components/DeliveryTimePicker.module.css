@@ -1,0 +1,125 @@
+/* DeliveryTimePicker — "Winding a clock" */
+
+.picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-7);
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.dialContainer {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  height: 280px;
+  overflow: hidden;
+}
+
+/* Center selection window */
+.selectionWindow {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 56px;
+  transform: translateY(-50%);
+  border-top: 1px solid var(--color-clay-light);
+  border-bottom: 1px solid var(--color-clay-light);
+  background: var(--color-linen);
+  border-radius: var(--radius-sm);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.scrollArea {
+  height: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.scrollArea::-webkit-scrollbar {
+  display: none;
+}
+
+.hourItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--color-clay);
+  cursor: pointer;
+  transition: all var(--duration-quick) var(--ease-default);
+  user-select: none;
+}
+
+.hourItemActive {
+  color: var(--color-ink);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-2xl);
+}
+
+/* Minute toggle */
+.minuteToggle {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.minuteOption {
+  padding: var(--space-3) var(--space-5);
+  background: transparent;
+  border: 1px solid var(--color-clay-light);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-warm-grey);
+  cursor: pointer;
+  transition: all var(--duration-quick) var(--ease-default);
+  letter-spacing: var(--tracking-wide);
+}
+
+.minuteOption:hover {
+  border-color: var(--color-clay);
+  color: var(--color-ink);
+}
+
+.minuteOptionActive {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-linen);
+}
+
+.minuteOptionActive:hover {
+  background: var(--color-indigo);
+  border-color: var(--color-indigo);
+  color: var(--color-linen);
+}
+
+/* Confirm */
+.confirmButton {
+  width: 100%;
+  max-width: 280px;
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-ink);
+  color: var(--color-linen);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-quick) var(--ease-default);
+}
+
+.confirmButton:hover {
+  background: var(--color-indigo);
+}
+
+.confirmButton:active {
+  transform: scale(0.98);
+}

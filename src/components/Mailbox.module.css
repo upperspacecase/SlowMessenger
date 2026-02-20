@@ -1,0 +1,160 @@
+/* Mailbox — "A quiet front porch" */
+
+.deliveryNotice {
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  opacity: 0;
+  margin-bottom: var(--space-9);
+}
+
+.deliveryButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-7) var(--space-6);
+  background: var(--color-linen);
+  border: 1px solid var(--color-clay-light);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--duration-standard) var(--ease-default);
+  box-shadow: var(--shadow-letter);
+  animation: gentlePulse 4s var(--ease-breathe) infinite;
+}
+
+.deliveryButton:hover {
+  box-shadow: var(--shadow-letter-hover);
+  transform: translateY(-1px);
+}
+
+.deliveryButton:active {
+  transform: translateY(0);
+}
+
+.deliveryCount {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  color: var(--color-terracotta);
+  font-weight: var(--weight-medium);
+}
+
+.deliveryHint {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-warm-grey);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* Quiet state */
+.quietState {
+  text-align: center;
+  padding: var(--space-6) 0 var(--space-9);
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.quietMessage {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-base);
+  color: var(--color-warm-grey);
+  line-height: var(--leading-relaxed);
+}
+
+/* Correspondents */
+.correspondents {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.correspondentCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+  padding: var(--space-5) var(--space-5);
+  background: var(--color-linen);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--duration-quick) var(--ease-default);
+  box-shadow: var(--shadow-subtle);
+  text-align: left;
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.correspondentCard:hover {
+  border-color: var(--color-clay-light);
+  box-shadow: var(--shadow-letter);
+}
+
+.correspondentName {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  color: var(--color-ink);
+  font-weight: var(--weight-medium);
+}
+
+.correspondentMeta {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-warm-grey);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-top: var(--space-6);
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.writeButton {
+  width: 100%;
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-ink);
+  color: var(--color-linen);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-quick) var(--ease-default);
+  letter-spacing: var(--tracking-normal);
+}
+
+.writeButton:hover {
+  background: var(--color-indigo);
+}
+
+.writeButton:active {
+  transform: scale(0.98);
+}
+
+.inviteButton {
+  width: 100%;
+  padding: var(--space-4) var(--space-6);
+  background: transparent;
+  color: var(--color-warm-grey);
+  border: 1px solid var(--color-clay-light);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: all var(--duration-quick) var(--ease-default);
+  letter-spacing: var(--tracking-wide);
+}
+
+.inviteButton:hover {
+  color: var(--color-ink);
+  border-color: var(--color-clay);
+}

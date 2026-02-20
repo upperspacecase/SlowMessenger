@@ -1,0 +1,166 @@
+/* Letter Composer — "A blank page on a writing desk" */
+
+.composePage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding-top: var(--space-6);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-clay-light);
+  margin-bottom: var(--space-6);
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: none;
+  border: none;
+  color: var(--color-warm-grey);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  padding: var(--space-2);
+  margin: calc(var(--space-2) * -1);
+  border-radius: var(--radius-sm);
+  transition: color var(--duration-quick) var(--ease-default);
+}
+
+.backButton:hover {
+  color: var(--color-ink);
+}
+
+.backLabel {
+  letter-spacing: var(--tracking-wide);
+}
+
+.recipient {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.toLabel {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-warm-grey);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+}
+
+.toName {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  color: var(--color-ink);
+  font-weight: var(--weight-medium);
+}
+
+/* Writing space */
+.writingSpace {
+  flex: 1;
+  padding: var(--space-4) 0;
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  animation-delay: 200ms;
+  opacity: 0;
+  transition: all var(--duration-dramatic) var(--ease-settle);
+}
+
+.writingSpace.sealing {
+  animation: sealFold var(--duration-dramatic) var(--ease-settle) forwards;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 200px;
+  background: transparent;
+  border: none;
+  resize: none;
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink);
+  outline: none;
+  padding: 0;
+}
+
+.textarea::placeholder {
+  color: var(--color-clay-light);
+  font-style: italic;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) 0 var(--space-6);
+  border-top: 1px solid var(--color-clay-light);
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  animation-delay: 400ms;
+  opacity: 0;
+}
+
+.deliveryNote {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-warm-grey);
+  letter-spacing: var(--tracking-wide);
+}
+
+.sealButton {
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-ink);
+  color: var(--color-linen);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-quick) var(--ease-default);
+  letter-spacing: var(--tracking-wide);
+}
+
+.sealButton:hover:not(:disabled) {
+  background: var(--color-indigo);
+}
+
+.sealButton:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.sealButton:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* Sealed confirmation */
+.sealedConfirmation {
+  text-align: center;
+  animation: fadeSettle var(--duration-dramatic) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.sealedText {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  color: var(--color-ink);
+  font-weight: var(--weight-medium);
+  margin-bottom: var(--space-3);
+}
+
+.sealedMeta {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-warm-grey);
+  letter-spacing: var(--tracking-wide);
+}

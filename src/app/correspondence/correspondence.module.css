@@ -1,0 +1,122 @@
+/* Correspondence Thread — "A collected bundle of letters" */
+
+.header {
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-clay-light);
+  margin-bottom: var(--space-8);
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: none;
+  border: none;
+  color: var(--color-warm-grey);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  padding: var(--space-2);
+  margin: calc(var(--space-2) * -1);
+  margin-bottom: var(--space-5);
+  border-radius: var(--radius-sm);
+  transition: color var(--duration-quick) var(--ease-default);
+  letter-spacing: var(--tracking-wide);
+}
+
+.backButton:hover {
+  color: var(--color-ink);
+}
+
+.backLabel {
+  letter-spacing: var(--tracking-wide);
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  margin-bottom: var(--space-2);
+  line-height: var(--leading-tight);
+}
+
+.meta {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-warm-grey);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* Letter bundle */
+.letterBundle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-bottom: var(--space-9);
+}
+
+/* Each letter — "a discrete card, not a chat bubble" */
+.letter {
+  background: var(--color-linen);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-letter);
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  opacity: 0;
+}
+
+.letterContent {
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink);
+  margin-bottom: var(--space-5);
+  white-space: pre-wrap;
+}
+
+.letterMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-warm-grey);
+  letter-spacing: var(--tracking-wide);
+}
+
+.metaDot {
+  opacity: 0.4;
+}
+
+/* Write action */
+.actions {
+  padding: var(--space-6) 0;
+  animation: fadeSettle var(--duration-standard) var(--ease-settle) forwards;
+  animation-delay: 600ms;
+  opacity: 0;
+}
+
+.writeButton {
+  width: 100%;
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-ink);
+  color: var(--color-linen);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-quick) var(--ease-default);
+}
+
+.writeButton:hover {
+  background: var(--color-indigo);
+}
+
+.writeButton:active {
+  transform: scale(0.98);
+}
