@@ -22,9 +22,10 @@
   --color-shadow-deep: rgba(58, 53, 48, 0.14);
 
   /* — Typography —
-     Literary serif for content, quiet sans-serif for UI */
-  --font-serif: 'Lora', 'Georgia', 'Times New Roman', serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+     Literary serif for content, quiet sans-serif for UI.
+     next/font overrides these on <html> when Lora/Inter load. */
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Type scale — generous, optimized for reading pleasure */
   --text-xs: 0.75rem;     /* 12px */
